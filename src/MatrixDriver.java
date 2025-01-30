@@ -18,5 +18,8 @@ public class MatrixDriver
         System.out.println(mat2.determinant());
 
         System.out.println(mat2.inverse());
+
+        mat2.rref();
+        System.out.println(mat2);
     }
 }
