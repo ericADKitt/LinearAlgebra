@@ -16,5 +16,7 @@ public class MatrixDriver
                 3, -2, 4, -1, 5, 2, -9, -2, 3);
 
         System.out.println(mat2.determinant());
+
+        System.out.println(mat2.inverse());
     }
 }
