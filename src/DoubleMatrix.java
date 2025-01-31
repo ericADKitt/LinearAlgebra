@@ -555,10 +555,17 @@ public class DoubleMatrix
     }
 
 
+    public DoubleMatrix rref()
+    {
+        DoubleMatrix rrefMatrix = this.copy();
+        rrefMatrix.rrefSelf();
+        return rrefMatrix;
+    }
+
     /**
      * Converts a matrix into its reduced row echelon form.
      */
-    public void rref()
+    private void rrefSelf()
     {
         //  The column that will be reduced to zeroes in every row where it is NOT the column
         //  of the leading entry.

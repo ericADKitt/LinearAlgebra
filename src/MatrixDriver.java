@@ -12,14 +12,13 @@ public class MatrixDriver
         System.out.println(translationMat.inverse());
         System.out.println(translationMat.inverse().multiply(scaleMat).multiply(translationMat));*/
 
-        DoubleMatrix mat2 = new DoubleMatrix(3, 3,
-                3, -2, 4, -1, 5, 2, -9, -2, 3);
+        DoubleMatrix mat = new DoubleMatrix(3, 3,-3, -2, -4, 1, 1, 4, 4, 4, -4);
+        DoubleVector vec = new DoubleVector(-2, -3, 3);
+        System.out.println(mat.multiply(vec));
 
-        System.out.println(mat2.determinant());
-
-        System.out.println(mat2.inverse());
-
-        mat2.rref();
-        System.out.println(mat2);
+        DoubleMatrix mat1 = new DoubleMatrix(4, 4, 1, 0, 0, 0, 3, 1, 0, 0, 4, 6, 1, 0, -9, 9, 3, 1);
+        DoubleMatrix mat2 = new DoubleMatrix(4, 3, 8, 6, -3, 0, 5, 3, 0, 0, 2, 0, 0, 0);
+        DoubleVector vec1 = new DoubleVector(-17, -44, -28, 210);
+        System.out.println("\n" + mat1.multiply(mat2).augment(vec1).rref());
     }
 }
